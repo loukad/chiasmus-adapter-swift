@@ -1,0 +1,39 @@
+{
+  "name": "chiasmus-adapter-swift",
+  "version": "0.1.0",
+  "description": "Swift language adapter for chiasmus (tree-sitter based)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist/", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["chiasmus", "chiasmus-adapter", "swift", "tree-sitter"],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "tree-sitter-swift": "^0.7.1"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tree-sitter": "^0.22.4",
+    "typescript": "^5.6.0",
+    "vitest": "^4.0.17"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
